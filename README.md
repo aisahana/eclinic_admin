@@ -2,7 +2,7 @@
 
 ## eClinic Admin
 
-Ini adalah API untuk eClinic. eClinic adalah aplikasi sistem informasi
+Ini adalah Admin untuk eClinic. eClinic adalah aplikasi sistem informasi
 rawat jalan sumber terbuka untuk klinik.
 
 ## API

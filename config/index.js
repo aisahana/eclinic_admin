@@ -74,10 +74,9 @@ module.exports = {
   //   bundleAnalyzerReport: process.env.npm_config_report
   // }
   build: {
-    // Template for index.html
-    index: path.resolve(__dirname, '../www/dist/index.html'),    // Paths
-    assetsRoot: path.resolve(__dirname, '../www/dist'),
+    index: path.resolve(__dirname, '../www/index.html'),
+    assetsRoot: path.resolve(__dirname, '../www'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '',
+    assetsPublicPath: ''
   }
 }

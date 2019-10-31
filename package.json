@@ -1,8 +1,8 @@
 {
   "name": "eclinic-panel",
-  "version": "1.0.0",
-  "description": "A Momoza project",
-  "author": "yanwar <yanwarsolah@gmail.com>",
+  "version": "1.1.0",
+  "description": "Frontend eClinic",
+  "author": "Aisahana <aisahana.business@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",

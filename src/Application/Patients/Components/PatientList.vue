@@ -7,7 +7,16 @@
         :items="patients"
         :fields="fields"
         @row-clicked="onSelect"
+        responsive
       >
+        <template v-slot:cell(is_draft)="data">
+          <small v-if="!data.item.is_draft">
+            <i class="fa fa-check text-success"></i> Terbit
+          </small>
+          <small v-if="data.item.is_draft">
+            <i class="fa fa-warning text-warning"></i> Draft
+          </small>
+        </template>
         <div slot="table-busy" class="text-center text-danger my-2">
           <b-spinner class="align-middle"></b-spinner>
           <strong>Loading...</strong>

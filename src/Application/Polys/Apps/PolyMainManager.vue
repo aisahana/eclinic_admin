@@ -2,7 +2,10 @@
   <common-layout :title="'Poli'">
     <div class="row mb-4">
       <div class="col-md-12">
-        <button @click="onCreatePoly" class="btn btn-primary float-right ml-2">
+        <button
+          @click="onCreatePoly"
+          class="btn btn-primary float-right ml-2"
+        >
           Poli Baru
         </button>
         <button
@@ -153,7 +156,7 @@ export default {
     },
     async onPublishPoly () {
       await this.publishPoly(this.poly.id)
-      await this.init()
+      await this.listPoly()
       await this.$refs['modal-PolyDetail'].hide()
     },
     async onDraftPoly () {
@@ -163,17 +166,15 @@ export default {
       await this.updatePoly(this.poly.id, payload)
       await this.init()
     },
-    onDestroyPoly () {
-      this.confirmDestroy('Poli')
-        .then(value => {
-          if (value) {
-            this.destroyPoly(this.poly.id)
-              .then((response) => {
-                this.init()
-                this.$refs['modal-PolyDetail'].hide()
-              })
-          }
-        })
+    async onDestroyPoly () {
+      try {
+        const approved = await this.confirmDestroy('Poli')
+        if (approved) {
+          await this.$refs['modal-PolyDetail'].hide()
+          await this.destroyPoly(this.poly.id)
+          await this.init()
+        }
+      } catch (err) {}
     },
     async onReportPoly () {
       const { data } = await this.reportPoly()

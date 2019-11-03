@@ -195,8 +195,8 @@ export default {
         marital: patient.marital
       }
       await this.updatePatient(patient.id, payload)
-      await this.init()
       await this.listRegister()
+      await this.retrievePatient(patient.id)
       // await this.toastUpdate()
     },
     async onPublishPatient () {

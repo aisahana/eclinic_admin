@@ -9,13 +9,19 @@ import VueAxios from 'vue-axios'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import VueBootstrapTypeahead from 'vue-bootstrap-typeahead'
-import vueDebounce from 'vue-debounce'
+import Datepicker from 'vuejs-datepicker'
+import VueSocketIO from 'vue-socket.io'
 
 Vue.config.productionTip = false
 
 Vue.use(VueAxios, axios)
 Vue.use(BootstrapVue)
-Vue.use(vueDebounce)
+Vue.use(new VueSocketIO({
+  debug: true,
+  connection: process.env.SOCKET_SERVER
+}))
+
+Vue.component('datepicker', Datepicker)
 Vue.component('vue-bootstrap-typeahead', VueBootstrapTypeahead)
 
 /* eslint-disable no-new */

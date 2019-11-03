@@ -11,6 +11,8 @@ import RegisterComposeManager from '@/Application/Registers/Apps/RegisterCompose
 import RecipeMainManager from '@/Application/Recipes/Apps/RecipeMainManager'
 import RecipeComposeManager from '@/Application/Recipes/Apps/RecipeComposeManager'
 import PaymentMainManager from '@/Application/Payments/Apps/PaymentMainManager'
+import CounterMainManager from '@/Application/Counters/Apps/CounterMainManager'
+import CounterPublicManager from '@/Application/Counters/Apps/CounterPublicManager'
 
 Vue.use(Router)
 
@@ -103,6 +105,22 @@ let router = new Router({
       component: PaymentMainManager,
       meta: {
         requiresAuth: true
+      }
+    },
+    {
+      path: '/counters',
+      name: 'CounterMainManager',
+      component: CounterMainManager,
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/counter-publics',
+      name: 'CounterPublicManager',
+      component: CounterPublicManager,
+      meta: {
+        requiresAuth: false
       }
     }
   ]

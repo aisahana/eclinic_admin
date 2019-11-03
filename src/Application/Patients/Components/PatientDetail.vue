@@ -63,12 +63,12 @@
       </div>
       <div class="form-group col-md-4">
         <label>Tanggal Lahir</label>
-        <input
-          type="date"
-          class="form-control"
-          @change="onUpdate"
+        <datepicker
+          @input="onUpdate"
+          :format="'D dsu MMM yyyy'"
           v-model="myPatient.date_birth"
-        >
+          :language="lang"
+        />
         <small class="form-text text-muted">
           * Jika tanggal lahir kosong, sistem akan mengisi field dengan nilai default
         </small>
@@ -78,8 +78,8 @@
         <input
           type="number"
           class="form-control"
-          @change="onUpdate"
-          v-model="myPatient.age"
+          disabled
+          :value="myPatient.age"
         >
         <small class="form-text text-muted">
           * Jika umur kosong, sistem akan mengisi field dengan nilai default
@@ -168,6 +168,8 @@
 </template>
 
 <script>
+import {id} from 'vuejs-datepicker/dist/locale'
+
 export default {
   name: 'PatientDetail',
   props: {
@@ -175,7 +177,8 @@ export default {
   },
   data () {
     return {
-      myPatient: undefined
+      myPatient: undefined,
+      lang: id
     }
   },
   methods: {

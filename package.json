@@ -1,6 +1,6 @@
 {
   "name": "eclinic-panel",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Frontend eClinic",
   "author": "Aisahana <aisahana.business@gmail.com>",
   "private": true,
@@ -15,12 +15,17 @@
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.2",
     "pdfmake": "^0.1.60",
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.0",
     "underscore": "^1.9.1",
+    "uws": "^100.0.1",
     "vue": "^2.6.10",
     "vue-axios": "^2.1.4",
     "vue-bootstrap-typeahead": "^0.2.6",
     "vue-debounce": "^2.1.0",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vue-socket.io": "^3.0.7",
+    "vuejs-datepicker": "^1.6.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

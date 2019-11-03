@@ -65,6 +65,17 @@
       <router-link
         active-class="active"
         class="nav-item"
+        :to="{name: 'CounterMainManager'}"
+        tag="li"
+      >
+        <a class="nav-link" href="javascript:void(0)">
+          <i class="fa fa-bullhorn"></i>
+          <p>Loket</p>
+        </a>
+      </router-link>
+      <router-link
+        active-class="active"
+        class="nav-item"
         :to="{name: 'RegisterMainManager'}"
         tag="li"
       >

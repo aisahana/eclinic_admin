@@ -8,6 +8,11 @@ rawat jalan sumber terbuka untuk klinik.
 ### API
 Karena aplikasi ini membutuhkan API, API eClinic bisa Anda dapatkan [disini](https://github.com/aisahana/eclinic_api).
 
+### Sistem Antrian Realtime
+Aplikasi ini dilengkapi dengan sistem antrian realtime
+yang membutuhkan socket server yang bisa Anda dapatkan
+[disini](https://github.com/aisahana/eclinicSocket).
+
 ### Quick Setup
 Clone repo ini lalu jalankan perintah:
 

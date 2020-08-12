@@ -19,24 +19,33 @@ Clone repo ini lalu jalankan perintah:
 ```
 # install dependencies
 npm install
-
+```
+Setelah selesai, jalankan development server:
+```
 # serve with hot reload at localhost:8080
 npm run dev
+```
 
+Panel Admin telah siap digunakan dengan mengakses:
+
+```
+http://localhost:8080
+```
+## Config
+Berkas konfigurasi dapat ditemukan di subfolder `config/`.
+Silakan diatur sesuai dengan kebutuhan.
+
+## Deployment
+Untuk membuat berkas statis, Anda dapat menjalankan:
+```
 # build for production with minification
 npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
-
-Setelah selesai, jalankan development server:
-
-API telah siap digunakan dengan mengakses:
-
-```
-http://localhost:8080
-```
+Setelah itu, Anda perlu menggunakan peladen web untuk menge-__serve__ berkas pada subfolder `www`.
+Gunakan Apache, NGINX, atau lainnya. Pindahkan berkas-berkas di subfolder `www` ke peladen pilihan Anda.
 
 ## Demo
 Anda bisa melihat demonya

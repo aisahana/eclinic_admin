@@ -17,7 +17,7 @@
     "pdfmake": "^0.1.60",
     "socket.io": "^2.3.0",
     "socket.io-client": "^2.3.0",
-    "underscore": "^1.9.1",
+    "underscore": "^1.12.1",
     "uws": "^100.0.1",
     "vue": "^2.6.10",
     "vue-axios": "^2.1.4",
